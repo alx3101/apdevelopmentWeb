@@ -1,0 +1,119 @@
+:root {
+  --primary: #000000 ;
+  --secondary: #f54601;
+  --tertiary: #101010 ;
+  --text: #ffffff ;
+  --description: #d6d6d6;
+}
+
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-color: var(--primary);
+  padding-left: 40px;
+  padding-right: 40px;
+}
+/* HEADER */
+
+.head-content {
+  max-width: 560px;
+}
+
+
+.btn-primary {
+  background-color: var(--secondary);
+  padding: 16px;
+}
+
+/* FEATURE HEADER */
+
+
+.service-card .bar {
+  position: relative;
+  z-index: 1;
+  background: #ff4800;
+  width: 55px;
+  height: 3px;
+  transition: .5s;
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+
+.service-card {
+  background-color: var(--tertiary);
+  padding-top: 5%;
+  padding-right: 30px;
+  padding-left: 30px; 
+  padding-top: 45px;
+  padding-bottom: 45px;
+  color: whitesmoke;
+}
+
+
+/* Service card nth-child */
+
+.service-card:nth-child(2n) .bar {
+  background: #ffffff; 
+}
+
+.service-card:nth-child(2n) {
+  background-color: var(--secondary);
+}
+
+.service-card hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, #ccc 50%, transparent 50%); /* inizia continua, poi diventa tratteggiata */
+}
+
+.service-card h2 {
+  position: relative;
+  display: inline-block;
+}
+
+.service-card p {
+  color: var(--description);
+  font-size: 15px ;
+}
+
+.service-card h2:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #ccc; /* colore della linea tratteggiata */
+  position: absolute;
+  bottom: -5px; /* distanza dalla parte inferiore del titolo */
+}
+
+
+.jumbotron {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.jumbotron h1 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.para {
+  color: var(--description);
+  font-size: 15px;
+  margin-bottom: 30px; 
+  margin-top: 30px;
+}
+
+
+
+ 
