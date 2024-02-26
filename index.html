@@ -39,122 +39,264 @@
 
 <body>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-          aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">ApDevelopment</a>
+  <nav class="navbar sticky-top" id="navbar">
+    <div class="container-fluid ">
+      <div class="row align-items-center">
+        <div class="col-auto text-right">
+          <img class="navbar-icon" src="icons/DARK WITH COLOR.png" alt="" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="row"></div>
+        <div class="col">
+          <a class="navbar-brand" href="#">Home</a>
+        </div>
+        <div class="col">
+          <a class="navbar-brand" href="#">About us</a>
+        </div>
+        <div class="col">
+          <a class="navbar-brand" href="#">Projects</a>
+        </div>
+        <div class="col">
+          <a class="navbar-brand" href="#">Contacts</a>
+        </div>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <form class="navbar-form navbar-right">
-          <div class="form-group">
-            <input type="text" placeholder="Email" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="password" placeholder="Password" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-success">Sign in</button>
-        </form>
-      </div><!--/.navbar-collapse -->
     </div>
   </nav>
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="head-content">
-      <h1>We develop the future</h1>
-      <p>We trust on innovation and that help us to succeed in future! Our team is innovative and interested to learn
-        your project to offer the best solutions from out of the box! </p>
-      <p><a class="btn-primary" href="#">Get started</a></p>
-    </div>
-  </div>
-
-  <section class="main-section">
-  <div class="main-container">
-    <!-- Example row of columns -->
-    <div class="row">
-      <div class="service-card col-md mr-4">
-        <div class="icon-container">
-          <img class="flaticon-app" src="icons/smartphone-secondary.png">
-        </div>
-        <h3>App development</h3>
-        <div class="bar"></div>
-        <p>Risus commodo maecenas accumsan lacus vel facilisis. Lorem ipsum dolor consectetur adipiscing elit.</p>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="service-card col-md mr-4">
-        <div class="icon-container">
-          <img class="flaticon-app" src="icons/computer-white.png">
-        </div>
-        <h3>Web development</h3>
-        <div class="bar"></div>
-        <p>Risus commodo maecenas accumsan lacus vel facilisis. Lorem ipsum dolor consectetur adipiscing elit.</p>
-        <div></div>
-        <div></div>
-      </div>
-      <div class="service-card col-md mr-4">
-        <div></div>
-        <h3>Brand development</h3>
-        <div class="bar"></div>
-        <p>Risus commodo maecenas accumsan lacus vel facilisis. Lorem ipsum dolor consectetur adipiscing elit.</p>
-        <div></div>
-        <div></div>
+  <section class="landing-section">
+    <div class="container-fluid">
+      <div class="head-content">
+        <h1>ApDevelopment</h1>
+        <p>We develop the future</p>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <div class="separator">
     <div class="br-line"></div>
   </div>
 
-  <section id="about" class="main-about main-dark about-area main-section">
-    <div class="main-container">
 
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="about-content">
-            <div class="main-section-title section-title">
-              <span>About Us</span>
-              <h2>Leading the way in Creative Digital Agency</h2>
-              <div class="bar"></div>
-            </div>
-            <div class="about-text">
-              <div class="icon">
-                <i class="flaticon-quality"></i>
+
+  <section id="about" class="main-about main-dark about-area main-section">
+    <div class="container-fluid">
+      <div class="container-fluid">
+        <div class="row">
+          <div class=" col-lg-6">
+            <div class="about-content">
+              <div class=" about-container-description main-section-title section-title">
+                <span>About Us</span>
+                <h2>Leading the way in Creative Digital Agency</h2>
+                <div class="bar"></div>
               </div>
-              <h3>Best Digital Agency in the World</h3>
-              <p>We provide marketing services to startups and small businesses to looking for a partner of their
-                digital media, design &amp; development,
-                lead generation and communications requirents.
-                We work with you, not for you. Although we have a great resources.</p>
-              <p>We are an experienced and talented team of passionate consultants who live and breathe search engine
-                marketing.</p>
+              <div class="about-text">
+                <div class="icon">
+                  <i class="flaticon-quality"></i>
+                </div>
+                <h3>Best Digital Agency in the World</h3>
+                <p>We provide marketing services to startups and small businesses to looking for a partner of their
+                  digital media, design &amp; development,
+                  lead generation and communications requirents.
+                  We work with you, not for you. Although we have a great resources.</p>
+                <p>We are an experienced and talented team of passionate consultants who live and breathe search engine
+                  marketing.</p>
+              </div>
             </div>
           </div>
+          <div class="col-lg-6">
+            <img class="about-img" src="icons/office.jpeg">
+          </div>
         </div>
-        <div class="col-6">
-          <Img class="about-img" src="icons/office.jpeg"></Img>
+      </div>
+    </div>
+  </section>
+
+  <div class="separator d-flex justify-content-center align-items-center">
+    <div class="br-line"></div>
+  </div>
+
+
+
+
+  <section id="services" class="main-services main-dark services-area main-section text-center d-flex align-items-center">
+    <div class="services-content">
+      <div class="services-container-description main-section-title section-title">
+        <span>Our qualities</span>
+        <h2>Qui saranno i miei servizi</h2>
+        <div class="bar"></div>
+      </div>
+      <div class="main-container">
+        <!-- Example row of columns -->
+        <div class="row justify-content-center align-items-center">
+          <div class="service-card col mb-3 col-12 col-sm-8 col-lg">
+            <div class="icon-container">
+              <img class="flaticon-app" src="icons/conoscenza-primaria.png">
+            </div>
+            <h3>App development</h3>
+            <div class="bar"></div>
+            <p>Risus commodo maecenas accumsan lacus vel facilisis. Lorem ipsum dolor consectetur adipiscing elit.</p>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="service-card col mb-3 col-12 col-sm-8 col-lg mr-lg-4 ml-lg-4">
+            <div class="icon-container">
+              <img class="flaticon-app" src="icons/precisione.png">
+            </div>
+            <h3>Web development</h3>
+            <div class="bar"></div>
+            <p>Risus commodo maecenas accumsan lacus vel facilisis. Lorem ipsum dolor consectetur adipiscing elit.</p>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="service-card col mb-3 col-12 col-sm-8 col-lg">
+            <div class="icon-container">
+              <img class="flaticon-app" src="icons/idea-primary.png">
+            </div>
+            <h3>Brand development</h3>
+            <div class="bar"></div>
+            <p>Risus commodo maecenas accumsan lacus vel facilisis. Lorem ipsum dolor consectetur adipiscing elit.</p>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <div class="separator">
+    <div class="br-line"></div>
+  </div>
+
+
+  <section id="projects" class="main-projects main-dark projects-area main-section">
+    <div class="horizontal-scroll">
+
+      <div class="project-card col-8 mb-3 col-4 col-sm-2 col-lg-3">
+        <div class="row align-items-center">
+          <div class="icon-container" style="width: 50px; height: 50px; background-color: #f0f0f0; text-align: center; line-height: 50px;">
+            <span style="color: #555;">Logo</span>
+          </div>
+          
+          <h5>Titolo progetto</h5>
+        </div>
+        <div class="project-description text-left">
+          <p>customer field</p>
+          <p>UI</p>
+          <p>App</p>
+          <p>Web</p>
+        </div>
+      </div>
+      <div class="project-card col-8 mb-3 col-4 col-sm-2 col-lg-3">
+        <div class="row align-items-center">
+          <div class="icon-container" style="width: 50px; height: 50px; background-color: #f0f0f0; text-align: center; line-height: 50px;">
+            <span style="color: #555;">Logo</span>
+          </div>
+          
+          <h5>Titolo progetto</h5>
+        </div>
+        <div class="project-description text-left">
+          <p>customer field</p>
+          <p>UI</p>
+          <p>App</p>
+          <p>Web</p>
+        </div>
+      </div>
+      <div class="project-card col-8 mb-3 col-4 col-sm-2 col-lg-3">
+        <div class="row align-items-center">
+          <div class="icon-container" style="width: 50px; height: 50px; background-color: #f0f0f0; text-align: center; line-height: 50px;">
+            <span style="color: #555;">Logo</span>
+          </div>
+          
+          <h5>Titolo progetto</h5>
+        </div>
+        <div class="project-description text-left">
+          <p>customer field</p>
+          <p>UI</p>
+          <p>App</p>
+          <p>Web</p>
+        </div>
+      </div>
+      <div class="project-card col-8 mb-3 col-4 col-sm-2 col-lg-3">
+        <div class="row align-items-center">
+          <div class="icon-container" style="width: 50px; height: 50px; background-color: #f0f0f0; text-align: center; line-height: 50px;">
+            <span style="color: #555;">Logo</span>
+          </div>
+          
+          <h5>Titolo progetto</h5>
+        </div>
+        <div class="project-description text-left">
+          <p>customer field</p>
+          <p>UI</p>
+          <p>App</p>
+          <p>Web</p>
+        </div>
+      </div>
+      <div class="project-card col-8 mb-3 col-4 col-sm-2 col-lg-3">
+        <div class="row align-items-center">
+          <div class="icon-container" style="width: 50px; height: 50px; background-color: #f0f0f0; text-align: center; line-height: 50px;">
+            <span style="color: #555;">Logo</span>
+          </div>
+          
+          <h5>Titolo progetto</h5>
+        </div>
+        <div class="project-description text-left">
+          <p>customer field</p>
+          <p>UI</p>
+          <p>App</p>
+          <p>Web</p>
+        </div>
+      </div>
+      <div class="project-card col-8 mb-3 col-4 col-sm-2 col-lg-3">
+        <div class="row align-items-center">
+          <div class="icon-container" style="width: 50px; height: 50px; background-color: #f0f0f0; text-align: center; line-height: 50px;">
+            <span style="color: #555;">Logo</span>
+          </div>
+          
+          <h5>Titolo progetto</h5>
+        </div>
+        <div class="project-description text-left">
+          <p>customer field</p>
+          <p>UI</p>
+          <p>App</p>
+          <p>Web</p>
+        </div>
+      </div>
+      <div class="project-card col-8 mb-3 col-4 col-sm-2 col-lg-3">
+        <div class="row align-items-center">
+          <div class="icon-container" style="width: 50px; height: 50px; background-color: #f0f0f0; text-align: center; line-height: 50px;">
+            <span style="color: #555;">Logo</span>
+          </div>
+          
+          <h5>Titolo progetto</h5>
+        </div>
+        <div class="project-description text-left">
+          <p>customer field</p>
+          <p>UI</p>
+          <p>App</p>
+          <p>Web</p>
+        </div>
+      </div>
+      <div class="project-card col-8 mb-3 col-4 col-sm-2 col-lg-3">
+        <div class="row align-items-center">
+          <div class="icon-container" style="width: 50px; height: 50px; background-color: #f0f0f0; text-align: center; line-height: 50px;">
+            <span style="color: #555;">Logo</span>
+          </div>
+          <h5>Titolo progetto</h5>
+        </div>
+        <div class="project-description text-left">
+          <p>customer field</p>
+          <p>UI</p>
+          <p>App</p>
+          <p>Web</p>
         </div>
       </div>
     </div>
   </section>
 
 
-  <section>
-
-  </section>
-
-
-
+  <div class="separator">
+    <div class="br-line"></div>
+  </div>
   <hr>
 
   <footer>
@@ -173,6 +315,9 @@
   <script src="../../dist/js/bootstrap.min.js"></script>
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/projects.js"></script>
 </body>
 
 </html>
