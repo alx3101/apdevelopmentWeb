@@ -5,6 +5,10 @@
   --text: #ffffff;
   --description: #d6d6d6;
   --secondary-shadow:  rgba(128, 0, 128, 0.499);
+  --extra-small-radius: 0.5rem;
+  --small-radius: 1.5rem;
+  --medium-radius: 2.5rem;
+  --large-radius: 3.5rem;
 }
 
 body {
@@ -12,6 +16,11 @@ body {
   padding-left: 0 !important;
   padding-top: 0 !important;
   animation: fadeIn 2s ease-in forwards;
+}
+
+.shadow {
+  box-shadow: 0px 0px 100vh var(--secondary-shadow) !important;
+
 }
 
 ì.example::-webkit-scrollbar {
@@ -53,7 +62,7 @@ h1 h2 h3 h4 h5 h6 {
   z-index: 1;
   width: 2px;
   height: 100%;
-  background-color: purple;
+  background-color: transparent;
   position: relative;
   overflow: hidden;
 }
@@ -64,7 +73,7 @@ h1 h2 h3 h4 h5 h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--primary);
+  background-color: var(--secondary-shadow);
   animation: slideLine 4s linear infinite;
 }
 @keyframes slideLine {
@@ -577,12 +586,9 @@ body {
 
 /* PROJECTS */
 
-.horizontal-scroll {
- 
-}
-
 /* Hide the scrollbar for Chrome, Safari and Edge */
 .horizontal-scroll {
+  background-color: transparent;
   height: auto;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -594,6 +600,7 @@ body {
   white-space: nowrap;
   scrollbar-width: none; /* for Firefox */
   -ms-overflow-style: none; /* for Internet Explorer and Edge */
+
 }
 
 .horizontal-scroll::-webkit-scrollbar {
@@ -621,10 +628,15 @@ body {
   opacity: 1; /* Quando l'elemento diventa visibile, imposta l'opacità a 1 */
 }
 
+.project-card:hover {
+  background-color: var(--secondary-shadow);
+  scale: 1.02;
+}
+
 .project-card.selected {
+  scale: 1.05;
   background-color: var(--secondary); /* Cambia il colore di sfondo della card quando selezionata */
-  box-shadow: 2px 2px 25px rgba(255, 255, 255, 0.250); /* Aggiunge un'ombra bianca leggera */
-  transition: background-color 0.5s ease, box-shadow 0.3s ease; /* Aggiungi una transizione per un effetto più fluido */
+  transition: background-color 0.5s ease, scale 0.3s ease; 
 }
 .project-card h5 {
   padding-left: 0.5rem;
@@ -642,6 +654,44 @@ body {
 .project-details.show-details {
   opacity: 1;
 }
+
+.project-details-container {
+  height: auto;
+  margin-left: 2.5rem !important;
+  margin-right: 2.5rem !important;
+  background-color: #101010;
+  padding: 2.5rem;
+  border-radius: var(--small-radius);
+  box-shadow: 0px 0px 100vh var(--secondary-shadow) !important;
+
+}
+
+.project-details-container .project-description {
+  padding-top: 0.5rem;
+}
+
+.project-field {
+  color: var(--text);
+  background-color: var(--secondary-shadow);
+  text-align: center;
+  border-radius: var(--medium-radius);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+
+}
+
+.project-details h3 {
+  color: var(--text);
+}
+
+.project-detaill-info {
+  color: var(--text);
+  font-size: medium;
+  font-weight: 300;
+
+}
+
 
 .horizontal-scroll .project-card:first-child {
   margin-left: 2.5rem !important;
