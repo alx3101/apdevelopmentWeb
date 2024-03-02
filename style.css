@@ -9,6 +9,11 @@
   --small-radius: 1.5rem;
   --medium-radius: 2.5rem;
   --large-radius: 3.5rem;
+  --extra-small: 0.5rem;
+  --small: 1.0rem;
+  --medium: 1.5rem;
+  --large: 2.0rem;
+  --extra-large: 2.5rem;
 }
 
 body {
@@ -586,8 +591,15 @@ body {
 
 /* PROJECTS */
 
+
+.projects-content .section-title {
+  text-align: center;
+}
+
 /* Hide the scrollbar for Chrome, Safari and Edge */
 .horizontal-scroll {
+  display: flex;
+  justify-items: center; 
   background-color: transparent;
   height: auto;
   padding-top: 40px;
@@ -611,14 +623,14 @@ body {
   height: auto;
   text-align: center;
   display: inline-block; 
-  border-radius: 5%;
+  border-radius: var(--small-radius);
   background-color: var(--tertiary);
   padding: 2.5%;
   margin: 0px;
   color: whitesmoke;
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease;
-  margin-left: 7.5px;
-  margin-right: 7.5px;
+  margin-left: 0.5rem;
+  margin-right: 0.5px;
   opacity: 0; /* Imposta l'opacità a 0 per nascondere gli elementi */
   transition:  1s ease-in-out; /* Aggiunge una transizione di opacità */
 }
@@ -631,19 +643,30 @@ body {
 .project-card:hover {
   background-color: var(--secondary-shadow);
   scale: 1.02;
+
 }
 
 .project-card.selected {
+  margin-left: 1.15rem;
+  margin-right: 1.15rem;
   scale: 1.05;
   background-color: var(--secondary); /* Cambia il colore di sfondo della card quando selezionata */
-  transition: background-color 0.5s ease, scale 0.3s ease; 
+  transition: background-color 0.5s ease, scale 0.3s ease, margin-right 0.3s ease, margin-left 0.3s ease; 
 }
 .project-card h5 {
   padding-left: 0.5rem;
+  white-space: normal;
+  margin-bottom: 0 !important;
+}
+
+.project-header-row {
+  display: flex; /* Imposta il display a flex per attivare il layout flessibile */
+  flex-wrap: wrap; 
+  text-align: center;
 }
 
 .project-description {
-  padding-top: 2.5rem;
+  padding-top: 0.5rem;
 }
 
 .project-details {
@@ -667,7 +690,7 @@ body {
 }
 
 .project-details-container .project-description {
-  padding-top: 0.5rem;
+  padding-top: 0.0rem;
 }
 
 .project-field {
@@ -700,4 +723,104 @@ body {
 .horizontal-scroll .project-card:last-child {
   margin-right: 2.5rem !important
 }
+
+
+/* CONTACT AREA */
+
+.main-contact {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.main-contact h2 {
+  color: var(--text);
+
+}
+
+.main-contact .form-group {
+  margin-bottom: var(--extra-large);
+}
+
+
+.main-contact .form-label {
+  color: var(--text);
+  background-color: var(--secondary-shadow);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: var(--small);
+  border-radius: var(--medium-radius);
+}
+
+
+.main-contact .form-control {
+ border-radius: var(--small-radius);
+ background-color: var(--tertiary);
+ padding-left: var(--small);
+ padding-top: var(--medium);
+ padding-bottom: var(--medium);
+ transition: padding-left 0.2s ease;
+ color: var(--text);
+ border: 0px;
+}
+
+
+.main-contact .form-control:focus {
+  border: transparent;
+  box-shadow: none;
+  outline: none;
+  padding-left: var(--medium) !important;
+}
+
+
+
+.main-contact .services-check {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.main-contact .form-check {
+  padding-top: var(--extra-small);
+  padding-bottom: var(--extra-small);
+  border-radius: var(--medium-radius);
+  margin-left: var(--small);
+  padding-left: var(--small);
+  padding-right: var(--small);
+  text-align: center
+}
+
+.main-contact .form-check:first-child {
+  margin-left: 0%;
+}
+
+.main-contact .form-check input {
+  margin-left: 0.25rem;
+}
+
+.main-contact .form-check label {
+  padding-right: 0.25rem;
+  color: var(--text);
+}
+
+.selected {
+  background-color: var(--secondary);
+  transition: background-color 0.3s ease; /* Transizione dello sfondo */
+}
+
+.not-selected {
+  background-color: var(--tertiary);
+  transition: background-color 0.3s ease; /* Transizione dello sfondo */
+}
+
+.main-contact .submit-button {
+  color: var(--text);
+  border: none;
+  width: 50%;
+  padding: var(--extra-small);
+  background-color: var(--secondary-shadow);
+  border-radius: var(--small);
+}
+
 
