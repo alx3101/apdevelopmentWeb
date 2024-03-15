@@ -23,6 +23,19 @@ function toggleCheckbox(id, containerId) {
     checkbox.dispatchEvent(new Event('change'));
 }
 
+function setAllCheckboxesNotSelected() {
+    document.querySelectorAll('.form-check-input').forEach(function(checkbox) {
+        checkbox.checked = false;
+        if (checkbox.parentElement.classList.contains('form-check')) {
+            checkbox.parentElement.classList.add('not-selected');
+            checkbox.parentElement.classList.remove('selected');
+        }
+        // Simula un evento di cambio per la checkbox
+        checkbox.dispatchEvent(new Event('change'));
+    });
+}
+
+
 var formInputs = document.querySelectorAll('#myForm input[type="checkbox"]');
 formInputs.forEach(function(input) {
     input.addEventListener('change', updateSubmitButtonState);
@@ -55,6 +68,8 @@ function updateSubmitButtonState() {
 document.getElementById('myForm').addEventListener('submit', async function(event) {
     event.preventDefault(); // Evita il comportamento di default del modulo
 
+    document.getElementById('overlay').style.display = 'flex';
+
     // Ottieni i valori dai campi del modulo
     const fullName = document.getElementById('fullNameInput').value;
     const email = document.getElementById('emailInput').value;
@@ -71,6 +86,15 @@ document.getElementById('myForm').addEventListener('submit', async function(even
 
     try {
         await invokeSupabaseFunction(fullName, email, 'Richiesta informazioni', details, servicesString);
+
+        setTimeout(() => {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('fullNameInput').value = '';
+            document.getElementById('emailInput').value = '';
+            document.getElementById('exampleFormControlTextarea1').value = '';
+             setAllCheckboxesNotSelected()
+    
+        }, 2000);
 
     } catch (error) {
         console.error('Si è verificato un errore durante l\'invocazione della funzione Supabase:', error);
@@ -99,6 +123,8 @@ document.getElementById('myForm').addEventListener('submit', async function(even
     }
   } catch (error) {
     console.error('Errore generale:', error);
+    document.getElementById('overlay').style.display = 'none';
+
     // Gestione degli errori
   }
 }
