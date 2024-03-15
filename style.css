@@ -141,7 +141,6 @@ h1 h2 h3 h4 h5 h6 {
 }
 
 .navbar {
-  height: 70px;
   transition: box-shadow 0.6s ease;
   background-color: var(--primary);
   padding-top: 0.0rem;
@@ -159,8 +158,8 @@ h1 h2 h3 h4 h5 h6 {
   box-shadow: 0px -25px 70px rgba(255, 255, 255, 0.534) !important;
 }
 
-
-.navbar-brand {
+.nav-link {
+  margin-right: 10px;
   color: var(--text);
   transition: color 0.7s ease, border-bottom 1.5s ease;
   font-size: 15px;
@@ -169,15 +168,19 @@ h1 h2 h3 h4 h5 h6 {
   position: relative;
 }
 
-.navbar-brand:hover {
-  color: var(--secondary);
-  border-bottom: 2px solid var(--secondary);
+.nav-item {
+  color: white;
 }
 
+
+
+.nav-link.selected {
+  color: white;
+  background-color: transparent;
+}
 .navbar-icon {
   width: 70px;
   height: 70px;
-  margin-right: 3.0rem;
 }
 
 .landing-section {
