@@ -24,38 +24,65 @@ function interpolateColor(color1, color2, factor) {
 }
 
 function selectNavItem(element, sectionId) {
-    // Rimuovi la classe 'selected' da tutti i link di navigazione
+    // Rimuove la classe 'selected' da tutti i link di navigazione
     var navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(function(link) {
         link.classList.remove('selected');
     });
     
-    // Aggiungi la classe 'selected' al link cliccato
+    // Aggiunge la classe 'selected' al link cliccato
     element.classList.add('selected');
    
-    // Controllo sezione "home"
+    // Effettua lo scroll fino alla sezione appropriata
     if (sectionId === 'home') {
-        // Effettua lo scroll fino all'inizio del viewport
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        scrollToTop();
     } else {
-        // Controllo sezione valida
         var section = document.getElementById(sectionId);
         if (section) {
-            // Effettua lo scroll fino alla sezione desiderata
-            section.scrollIntoView({ behavior: 'smooth' });
+            if (isMobile()) {
+                scrollToSection(section, true); // Con offset per dispositivi mobili
+            } else {
+                scrollToSectionCentered(section);
+            }
         } else {
-            // Sezione non trovata
             console.log("Sezione non trovata:", sectionId);
         }
     }
 }
 
+// Effettua lo scroll fino all'inizio del viewport
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
 
+// Effettua lo scroll fino alla parte superiore della sezione
+function scrollToSection(section, mobileOffset) {
+    var offset = mobileOffset ? 100 : 0; // Offset di 50px per dispositivi mobili
+    window.scrollTo({
+        top: section.offsetTop - offset,
+        behavior: 'smooth'
+    });
+}
 
-  
+// Effettua lo scroll fino alla sezione centrata verticalmente
+function scrollToSectionCentered(section) {
+    var windowHeight = window.innerHeight;
+    var sectionHeight = section.offsetHeight;
+    var offset = (windowHeight - sectionHeight) / 2;
+    window.scrollTo({
+        top: section.offsetTop - offset,
+        behavior: 'smooth'
+    });
+}
+
+// Verifica se il dispositivo è mobile
+function isMobile() {
+    return window.matchMedia("only screen and (max-width: 768px)").matches;
+}
+
   // Funzione per evidenziare l'elemento della barra di navigazione corrispondente alla sezione attiva
   function highlightNavItem(sectionId) {
     const navItems = document.querySelectorAll('[data-section]');
@@ -72,12 +99,17 @@ function selectNavItem(element, sectionId) {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         const rect = section.getBoundingClientRect();
-        console.log(section.id, rect.top, rect.bottom, window.innerHeight);
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        let sectionCenter = rect.top + rect.height / 2; // Calcoliamo il centro verticale della sezione
+        if (isMobile()) {
+            const offset = window.innerHeight * 0.1; // Definiamo un offset del 10% dell'altezza della finestra di visualizzazione solo su dispositivi mobili
+            sectionCenter += offset; // Aggiungiamo l'offset al centro verticale della sezione solo su dispositivi mobili
+        }
+        if (sectionCenter >= 0 && sectionCenter <= window.innerHeight) {
             highlightNavItem(section.id);
         }
     });
 }
+
 
 
 
