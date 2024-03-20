@@ -2,89 +2,41 @@
 var projects = [
   {
       id: 1,
-      title: "Gestionale",
-      customer: "Azienda",
-      description: "Creazione di un'applicazione web per la gestione dei progetti aziendali, inclusa la pianificazione delle attività, il monitoraggio del progresso e la collaborazione del team.",
-      duration: "2021 - presente",
-      work: ["UI","Web"]
+      title: "ApDevelopment",
+      icon: "icons/DARK WITH COLOR.png",
+      customer: "",
+      description: "This project involves the development of our website from scratch, aiming to enhance user experience and functionality.",
+      duration: "February - March 2024",
+      work: ["Web"]
   },
   {
       id: 2,
-      title: " aziendale",
-      customer: "Test SRL",
-      description: "Ristrutturazione completa del sito web aziendale per migliorare l'esperienza dell'utente, l'ottimizzazione dei motori di ricerca e l'accessibilità.",
-      duration: "2020 - 2021",
-      work: ["UI","App","Web"]
+      title: "Beyes",
+      customer: "Beyes SRL",
+      icon: "",
+      description: "Beyes is a real-time customer monitoring application <br> designed to provide users with insights into crowd levels within various venues. With Beyes, users can receive up-to-date information on crowd density in their desired area, enabling them to make informed decisions about their activities. The project encompasses the development of native apps to offer an optimized experience across different platforms, as well as the implementation of backend infrastructure to manage and analyze collected data. Additionally, Beyes also includes the production phase to ensure an effective market launch.",
+      duration: "2020 - Now",
+      work: ["UI","App","Web","Backend","MQTT"]
       // Altri campi del progetto se necessario...
   },
   {
-    id: 1,
-    title: "Gestionale",
-    customer: "Azienda",
-    description: "Creazione di un'applicazione web per la gestione dei progetti aziendali, inclusa la pianificazione delle attività, il monitoraggio del progresso e la collaborazione del team.",
-    duration: "2021 - presente",
-    work: ["UI","Web"]
+    id: 3,
+    title: "Trading signal App",
+    icon: "",
+    customer: "Private customer",
+    description: "Trading Signal App is a project focused on creating an iOS application that provides trading signals. <br>The app was developed to allow users to receive real-time trading signals and make informed investment decisions. <br>The work involved developing an intuitive user interface (UI) to ensure an optimal user experience. <br>In addition to the front-end aspect, a robust backend was implemented to manage data and integrate an automated system for uploading trading signals. <br>The project was completed from June 2020 to December 2020, in collaboration with a private customer.",
+    duration: "June 2020 - Dicember 2020",
+    work: ["UI","App", "Backend"]
 },
 {
-    id: 2,
-    title: " aziendale",
-    customer: "Test SRL",
-    description: "Ristrutturazione completa del sito web aziendale per migliorare l'esperienza dell'utente, l'ottimizzazione dei motori di ricerca e l'accessibilità.",
-    duration: "2020 - 2021",
-    work: ["UI","App","Web"]
+    id: 4,
+    title: "More coming soon...",
+    customer: "",
+    description: "",
+    duration: "",
+    work: []
     // Altri campi del progetto se necessario...
-},
-{
-  id: 1,
-  title: "Gestionale",
-  customer: "Azienda",
-  description: "Creazione di un'applicazione web per la gestione dei progetti aziendali, inclusa la pianificazione delle attività, il monitoraggio del progresso e la collaborazione del team.",
-  duration: "2021 - presente",
-  work: ["UI","Web"]
-},
-{
-  id: 2,
-  title: " aziendale",
-  customer: "Test SRL",
-  description: "Ristrutturazione completa del sito web aziendale per migliorare l'esperienza dell'utente, l'ottimizzazione dei motori di ricerca e l'accessibilità.",
-  duration: "2020 - 2021",
-  work: ["UI","App","Web"]
-  // Altri campi del progetto se necessario...
-},
-{
-  id: 1,
-  title: "Gestionale",
-  customer: "Azienda",
-  description: "Creazione di un'applicazione web per la gestione dei progetti aziendali, inclusa la pianificazione delle attività, il monitoraggio del progresso e la collaborazione del team.",
-  duration: "2021 - presente",
-  work: ["UI","Web"]
-},
-{
-  id: 2,
-  title: " aziendale",
-  customer: "Test SRL",
-  description: "Ristrutturazione completa del sito web aziendale per migliorare l'esperienza dell'utente, l'ottimizzazione dei motori di ricerca e l'accessibilità.",
-  duration: "2020 - 2021",
-  work: ["UI","App","Web"]
-  // Altri campi del progetto se necessario...
-},
-{
-  id: 1,
-  title: "Gestionale",
-  customer: "Azienda",
-  description: "Creazione di un'applicazione web per la gestione dei progetti aziendali, inclusa la pianificazione delle attività, il monitoraggio del progresso e la collaborazione del team.",
-  duration: "2021 - presente",
-  work: ["UI","Web"]
-},
-{
-  id: 2,
-  title: " aziendale",
-  customer: "Test SRL",
-  description: "Ristrutturazione completa del sito web aziendale per migliorare l'esperienza dell'utente, l'ottimizzazione dei motori di ricerca e l'accessibilità.",
-  duration: "2020 - 2021",
-  work: ["UI","App","Web"]
-  // Altri campi del progetto se necessario...
-},
+}
 ];
 
 
