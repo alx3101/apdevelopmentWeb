@@ -45,22 +45,23 @@ var projects = [
 
 function generateProjectCard(project) {
   var card = document.createElement("div");
-  card.classList.add("project-card", "col-8", "mb-3", "col-4", "col-sm-4", "col-lg-3");
+  card.classList.add("project-card", "col-10", "mb-3", "col-4", "col-sm-4", "col-lg-3");
 
   card.innerHTML = `
-     <div class="project-header-row align-items-center">
-      <div class="icon-container" style="width: 50px; height: 50px; background-color: #f0f0f0; text-align: center; line-height: 50px;">
-      <span style="color: #555;">Logo</span>
-      </div>
-    
-     <h5 class="text-left">${project.title}</h5>
+  <div class="project-header-row align-items-center">
+  ${project.icon ? `
+    <div class="col-4" style="overflow: hidden;">
+      <img src="${project.icon}" alt="Logo" style="max-width: 100%; max-height: 100%; float: left;">
     </div>
-    <div class="project-description text-left">
-       <p>${project.customer}</p>
-
-   </div>
-  `;
-
+  ` : ''}
+  <div class="col-8 align-items-center" style="align-items: center;">
+    <h5 class="text-left" style="width: 100%;">${project.title}</h5>
+    <div class="project-description text-left" style="width: 100%;">
+      <p style="font-size: 20px; width: 100%;">${project.customer}</p>
+    </div>
+  </div>
+</div>
+`;
 
   // Aggiungi l'evento onclick per gestire il click sulla card
   card.onclick = function() {
@@ -110,9 +111,12 @@ projectCards.forEach(card => {
   }
 });
 
-// Opzioni per l'IntersectionObserver
+function isMobile() {
+  return window.matchMedia("only screen and (max-width: 768px)").matches;
+}
+
 const options = {
-  threshold: 0.3 // Definisce quanto dell'elemento deve essere visibile prima che venga rilevato
+  threshold: isMobile() ? 0.00 : 0.3
 };
 
 // Funzione di callback per l'IntersectionObserver
@@ -144,6 +148,10 @@ projectCards.forEach(function(card) {
 });
 
 function toggleProjectDetails(project,projectContainer,card) {
+
+  if (project.title == "More coming soon...") {
+    return;
+}
   // Seleziona il contenitore delle project card
   var projectContainer = card.closest('.horizontal-scroll').parentElement;
 
