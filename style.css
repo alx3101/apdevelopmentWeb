@@ -687,10 +687,10 @@ body {
 .project-card {
   height: auto;
   text-align: center;
-  display: inline-block;
+  position: relative;
   border-radius: var(--small-radius);
   background-color: var(--tertiary);
-  padding: 2.5%;
+  padding: 1.5%;
   margin: 0px;
   color: whitesmoke;
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease;
@@ -700,6 +700,19 @@ body {
   /* Imposta l'opacità a 0 per nascondere gli elementi */
   transition: 1s ease-in-out;
   /* Aggiunge una transizione di opacità */
+}
+
+.project-header-row {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+@media screen and (max-width: 768px) {
+  .project-card {
+    padding: 2.5%;
+  }
 }
 
 
@@ -724,9 +737,12 @@ body {
 }
 
 .project-card h5 {
-  padding-left: 0.5rem;
   white-space: normal;
   margin-bottom: 0 !important;
+}
+
+.project-card p {
+  margin-bottom: 0px !important;
 }
 
 .project-header-row {
@@ -737,7 +753,7 @@ body {
 }
 
 .project-description {
-  padding-top: 0.5rem;
+  padding-top: 0.0rem;
 }
 
 .project-details {
@@ -771,8 +787,6 @@ body {
   border-radius: var(--medium-radius);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-
-
 }
 
 .project-details h3 {
