@@ -191,9 +191,9 @@ function toggleProjectDetails(project,projectContainer,card) {
 
   // Crea e aggiungi i dettagli del progetto sotto il contenitore principale
   var projectDetails = document.createElement('div');
-  projectDetails.className = 'project-details row project-details-container'; // Aggiungo la classe 'row' per utilizzare il sistema di griglie di Bootstrap
+  projectDetails.className = 'project-details row project-details-container mt-5'; // Aggiungo la classe 'row' per utilizzare il sistema di griglie di Bootstrap
   projectDetails.innerHTML = `
-          <div class="col-md-6 ">
+          <div class="col-md-6">
               <h3 class="mb-2">${project.title}</h3>
               <p class="project-detaill-info">Durata: ${project.duration}</p>
               <div class=" row project-description text-left">
