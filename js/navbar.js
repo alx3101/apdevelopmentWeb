@@ -23,6 +23,23 @@ function interpolateColor(color1, color2, factor) {
     return result;
 }
 
+function toggleNavbar() {
+    var navbarCollapse = document.getElementById("navbarNav");
+    if (navbarCollapse.classList.contains("show")) {
+      // Se la navbar è già aperta, chiudila
+      navbarCollapse.classList.remove("show");
+      navbarCollapse.classList.add("collapsing");
+      setTimeout(function() {
+        navbarCollapse.classList.remove("collapsing");
+      }, 300); // Tempo dell'animazione in millisecondi
+    } else {
+      // Se la navbar è chiusa, aprila
+      navbarCollapse.classList.add("show");
+    }
+  }
+  
+  
+
 function selectNavItem(element, sectionId) {
     // Rimuove la classe 'selected' da tutti i link di navigazione
     var navLinks = document.querySelectorAll('.nav-link');
