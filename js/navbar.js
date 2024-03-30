@@ -44,11 +44,11 @@ function selectNavItem(element, sectionId) {
     // Rimuove la classe 'selected' da tutti i link di navigazione
     var navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(function(link) {
-        link.classList.remove('selected');
+        link.classList.remove('active');
     });
     
     // Aggiunge la classe 'selected' al link cliccato
-    element.classList.add('selected');
+    element.classList.add('active');
    
     // Effettua lo scroll fino alla sezione appropriata
     if (sectionId === 'home') {
@@ -77,7 +77,7 @@ function scrollToTop() {
 
 // Effettua lo scroll fino alla parte superiore della sezione
 function scrollToSection(section, mobileOffset) {
-    var offset = mobileOffset ? 100 : 0; // Offset di 50px per dispositivi mobili
+    var offset = mobileOffset ? 150 : 0; // Offset di 50px per dispositivi mobili
     window.scrollTo({
         top: section.offsetTop - offset,
         behavior: 'smooth'
@@ -113,6 +113,10 @@ function isMobile() {
   }
 
   function handleScroll() {
+    var navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(function(link) {
+        link.classList.remove('active');
+    });
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         const rect = section.getBoundingClientRect();

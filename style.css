@@ -1,4 +1,5 @@
 :root {
+  --nav-link: hsla(0, 0%, 100%, 0.500);
   --primary: #000000;
   --secondary: #800080;
   --tertiary: #101010;
@@ -175,7 +176,7 @@ h1 h2 h3 h4 h5 h6 {
 
 .nav-link {
   margin-right: 10px;
-  color: var(--text);
+  color: var(--nav-link);
   transition: color 0.7s ease, border-bottom 1.5s ease;
   font-size: 15px;
   font-weight: 600;
@@ -187,10 +188,13 @@ h1 h2 h3 h4 h5 h6 {
   color: white;
 }
 
-.nav-link.selected {
+
+
+.active .nav-link {
   color: white;
   background-color: transparent;
 }
+
 .navbar-icon {
   width: 70px;
   height: 70px;
