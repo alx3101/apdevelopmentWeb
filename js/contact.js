@@ -75,6 +75,10 @@ document.getElementById('myForm').addEventListener('submit', async function(even
     const email = document.getElementById('emailInput').value;
     const details = document.getElementById('exampleFormControlTextarea1').value;
 
+    if (!fullName && !email && !details) {
+        console.log('Per favore, compila tutti i campi obbligatori.');
+    }
+
     // Ottieni i servizi selezionati
     const selectedServices = [];
     document.querySelectorAll('.form-check-input:checked').forEach(function(serviceCheckbox) {
